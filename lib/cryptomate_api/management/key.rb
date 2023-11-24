@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Management
     # Manage the api-keys of your clients.
     # You can create, modify and delete them.

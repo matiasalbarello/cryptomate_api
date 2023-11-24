@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Mpc
     # The accounts module allows you to create and manage multiple accounts, each with their own wallets.
     # This allows you to manage your crypto assets in a more organized manner,

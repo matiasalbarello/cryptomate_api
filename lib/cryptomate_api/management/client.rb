@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Management
     # Manage the company information from here, like changing the webhook url where we will
     # notify that some event happened or just changing the name of the company.

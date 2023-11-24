@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Management
     # Manage the company configurations from here, like changing the payment destination address for each blockchain.
     class Configuration < CryptomateAPI::Base

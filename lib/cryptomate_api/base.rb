@@ -1,6 +1,6 @@
 require 'httparty'
 
-module CryptomateAPI
+module CryptomateApi
   class Base
     include HTTParty
     base_uri 'https://cryptomate.me/api'

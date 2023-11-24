@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Management
     # Manage the access you give to each key and the permissions you will have for each blockchain,
     # such as only receiving transactions or only accessing one of the blockchains.

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CryptomateAPI
+module CryptomateApi
   module Management
     # Get all the blockchains available in the platform. You can use this information to create new
     # credentials for your clients or using every other endpoints that ask for the blockchain where
