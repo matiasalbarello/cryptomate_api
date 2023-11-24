@@ -28,21 +28,21 @@ module CryptomateApi
 
       # Create an account
       # https://cryptomate.me/docs/mpc/create-an-account
-      # @param [String] alias (Alias name of the account to create.)
+      # @param [String] alias_name (Alias name of the account to create.)
       # Response:
       # {
       #   "id": "String",
       #   "alias": "String",
       #   "wallets": []
       # }
-      def create_account(alias)
-        self.class.post("/mpc/accounts/create", body: { alias: }.to_json)
+      def create_account(alias_name)
+        self.class.post("/mpc/accounts/create", body: { alias: alias_name }.to_json)
       end
 
       # Edit account: Modifies the account information.
       # https://cryptomate.me/docs/mpc/edit-account
       # @param [String] account_id (Id of the account to edit.)
-      # @param [String] alias (New alias name of the account.)
+      # @param [String] alias_name (New alias name of the account.)
       # Response:
       # {
       #   "id": "string",
@@ -56,8 +56,8 @@ module CryptomateApi
       #     }
       #   ]
       # }
-      def edit_account(account_id, alias)
-        self.class.put("/mpc/account/#{account_id}", body: { alias: }.to_json)
+      def edit_account(account_id, alias_name)
+        self.class.put("/mpc/account/#{account_id}", body: { alias: alias_name }.to_json)
       end
 
       # Delete account

@@ -48,15 +48,15 @@ module CryptomateApi
       #   "wallet_address": "string",
       #   "blockchain": "string"
       # }
-      def create_wallet(account_id, alias, blockchain)
-        self.class.post("/mpc/accounts/#{account_id}/wallets/create", body: { alias:, blockchain: }.to_json)
+      def create_wallet(account_id, alias_name, blockchain)
+        self.class.post("/mpc/accounts/#{account_id}/wallets/create", body: { alias: alias_name, blockchain: }.to_json)
       end
 
       # Update a wallet: Modifies the wallet information.
       # https://cryptomate.me/docs/mpc/update-wallet
       # @param [String] account_id (Id of the account to update the wallet on.)
       # @param [String] wallet_id (Id of the wallet to update.)
-      # @param [String] alias (Alias to identify the wallet to update.)
+      # @param [String] alias_name (Alias to identify the wallet to update.)
       # Response:
       # {
       #   "id": "string",
@@ -64,8 +64,8 @@ module CryptomateApi
       #   "wallet_address": "string",
       #   "blockchain": "string"
       # }
-      def update_wallet(account_id, wallet_id, alias)
-        self.class.put("/mpc/accounts/#{account_id}/wallets/#{wallet_id}", body: { alias: }.to_json)
+      def update_wallet(account_id, wallet_id, alias_name)
+        self.class.put("/mpc/accounts/#{account_id}/wallets/#{wallet_id}", body: { alias: alias_name }.to_json)
       end
 
       # Transfer Token
