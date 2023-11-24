@@ -4,7 +4,7 @@ module CryptomateApi
   module Management
     # Manage the company information from here, like changing the webhook url where we will
     # notify that some event happened or just changing the name of the company.
-    class Client < CryptomateAPI::Base
+    class Client < CryptomateApi::Base
       # Get clients information
       # https://cryptomate.me/docs/management#get-clients-information
       # Response:

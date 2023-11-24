@@ -4,7 +4,7 @@ module CryptomateApi
   module Management
     # Manage the access you give to each key and the permissions you will have for each blockchain,
     # such as only receiving transactions or only accessing one of the blockchains.
-    class Credential < CryptomateAPI::Base
+    class Credential < CryptomateApi::Base
       # Get all credentials for an API-Key
       # https://cryptomate.me/docs/management#get-all-credentials-for-a-api-key
       # @param [String] api_key (API-Key to see its credentials.)

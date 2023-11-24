@@ -5,7 +5,7 @@ module CryptomateApi
     # The accounts module allows you to create and manage multiple accounts, each with their own wallets.
     # This allows you to manage your crypto assets in a more organized manner,
     # and also allows you to create multiple wallets for the same or different blockchain.
-    class Wallet < CryptomateAPI::Base
+    class Wallet < CryptomateApi::Base
       # Get a wallet: Retrieves a wallet by ID.
       # https://cryptomate.me/docs/mpc/get-a-wallet
       # @param [String] account_id (Id of the account to get the wallet from.)

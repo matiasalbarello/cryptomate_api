@@ -5,7 +5,7 @@ module CryptomateApi
     # Manage the api-keys of your clients.
     # You can create, modify and delete them.
     # This api-keys are used to authenticate the clients in the platform.
-    class Key < CryptomateAPI::Base
+    class Key < CryptomateApi::Base
       # Get all keys
       # https://cryptomate.me/docs/management#get-all-keys
       # Response:

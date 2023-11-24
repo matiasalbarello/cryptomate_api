@@ -3,7 +3,7 @@
 module CryptomateApi
   module Management
     # Manage the company configurations from here, like changing the payment destination address for each blockchain.
-    class Configuration < CryptomateAPI::Base
+    class Configuration < CryptomateApi::Base
       # Get payment destination
       # Gets the treasury wallet address for holding the payments received on the selected blockchain.
       # https://cryptomate.me/docs/management#get-payment-destination
