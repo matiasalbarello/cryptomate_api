@@ -11,7 +11,7 @@ module CryptomateApi
   end
 
   class Configuration
-    attr_accessor :api_key
+    attr_accessor :api_key, :base_uri
 
     def initialize
       @api_key = nil
