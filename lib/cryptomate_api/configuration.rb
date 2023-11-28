@@ -15,6 +15,7 @@ module CryptomateApi
 
     def initialize
       @api_key = nil
+      @base_uri = 'https://cryptomate.me/api'
     end
   end
 end
