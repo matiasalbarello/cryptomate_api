@@ -31,6 +31,9 @@ require 'cryptomate_api'
 
 CryptomateApi.configure do |config|
   config.api_key = 'your_api_key_here'
+
+  # optional:
+  config.base_uri = 'your-sandbox-uri'
 end
 ```
 ## Usage
