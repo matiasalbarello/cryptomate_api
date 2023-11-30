@@ -1,13 +1,19 @@
 AllCops:
-  TargetRubyVersion: 2.6
+  NewCops: enable
+  TargetRubyVersion: 3.1
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
 
 Layout/LineLength:
   Max: 120
+  AllowedPatterns: ['(\A|\s)#'] # ignore comments
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
