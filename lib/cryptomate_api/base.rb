@@ -5,11 +5,11 @@ module CryptomateApi
     include HTTParty
 
     # Initializes the client with the given API key
-      self.class.headers "Authorization" => "Bearer #{@api_key}"
     def initialize
       CryptomateApi.configuration ||= CryptomateApi::Configuration.new
       @api_key = CryptomateApi.configuration.api_key
       self.class.base_uri CryptomateApi.configuration.base_uri
+      self.class.headers "x-api-key" => "#{@api_key}"
     end
   end
 end
