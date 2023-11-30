@@ -24,7 +24,7 @@ module CryptomateApi
       # @param [String] blockchain (Id of the blockchain.)
       # Response: None
       def set_payment_destination(address, blockchain)
-        self.class.post("/management/configurations/payments", body: { address:, blockchain: }.to_json)
+        self.class.post('/management/configurations/payments', body: { address:, blockchain: }.to_json)
       end
 
       # Delete payment destination

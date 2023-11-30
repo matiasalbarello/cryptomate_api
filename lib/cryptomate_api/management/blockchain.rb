@@ -16,7 +16,7 @@ module CryptomateApi
       #   }
       # ]
       def get_all_blockchains
-        self.class.get("/management/blockchains/list")
+        self.class.get('/management/blockchains/list')
       end
     end
   end

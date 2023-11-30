@@ -16,7 +16,7 @@ module CryptomateApi
       #   "webhook_url": "string",
       # }
       def get_clients
-        self.class.get("/management/clients")
+        self.class.get('/management/clients')
       end
 
       # Update Webhook-Url
@@ -29,7 +29,7 @@ module CryptomateApi
       #   "webhook_url": "string"
       # }
       def update_webhook_url(webhook_url)
-        self.class.patch("/management/clients/webhook-url", body: { webhook_url: }.to_json)
+        self.class.patch('/management/clients/webhook-url', body: { webhook_url: }.to_json)
       end
 
       # Update Client-Information
@@ -44,7 +44,7 @@ module CryptomateApi
       #   "webhook_url": "string"
       # }
       def update_client_information(name, email, webhook_url)
-        self.class.put("/management/clients", body: { name:, email:, webhook_url: }.to_json)
+        self.class.put('/management/clients', body: { name:, email:, webhook_url: }.to_json)
       end
 
       # Update Payment Address
@@ -56,7 +56,7 @@ module CryptomateApi
       #   "address": "string",
       # }
       def update_payment_address(address, blockchain)
-        self.class.patch("/management/clients/payment-treasury", body: { address:, blockchain: }.to_json)
+        self.class.patch('/management/clients/payment-treasury', body: { address:, blockchain: }.to_json)
       end
     end
   end

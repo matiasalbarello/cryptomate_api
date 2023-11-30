@@ -61,7 +61,7 @@ module CryptomateApi
       #   }
       # }
       def create_credential(api_key, operation_id)
-        self.class.post("/management/credentials", body: { api_key:, operation_id: }.to_json)
+        self.class.post('/management/credentials', body: { api_key:, operation_id: }.to_json)
       end
 
       # Modifies a credential by ID.

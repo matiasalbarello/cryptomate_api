@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'httparty'
 
 module CryptomateApi
@@ -9,7 +11,7 @@ module CryptomateApi
       CryptomateApi.configuration ||= CryptomateApi::Configuration.new
       @api_key = CryptomateApi.configuration.api_key
       self.class.base_uri CryptomateApi.configuration.base_uri
-      self.class.headers "x-api-key" => "#{@api_key}"
+      self.class.headers 'x-api-key' => @api_key
     end
   end
 end

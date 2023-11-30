@@ -15,7 +15,7 @@ module CryptomateApi
       #   }
       # ]
       def get_all_operations
-        self.class.get("/management/operations/list")
+        self.class.get('/management/operations/list')
       end
 
       # Get a specific operation

@@ -23,7 +23,7 @@ module CryptomateApi
       #   ]
       # }
       def get_all_accounts
-        self.class.get("/mpc/accounts/list")
+        self.class.get('/mpc/accounts/list')
       end
 
       # Create an account
@@ -36,7 +36,7 @@ module CryptomateApi
       #   "wallets": []
       # }
       def create_account(alias_name)
-        self.class.post("/mpc/accounts/create", body: { alias: alias_name }.to_json)
+        self.class.post('/mpc/accounts/create', body: { alias: alias_name }.to_json)
       end
 
       # Edit account: Modifies the account information.

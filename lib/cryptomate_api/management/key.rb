@@ -16,7 +16,7 @@ module CryptomateApi
       #   }
       # ]
       def get_all_keys
-        self.class.get("/management/keys/list")
+        self.class.get('/management/keys/list')
       end
 
       # Get a specific key
@@ -43,7 +43,7 @@ module CryptomateApi
       #   }
       # ]
       def create_key(name)
-        self.class.post("/management/keys/create", body: { name: }.to_json)
+        self.class.post('/management/keys/create', body: { name: }.to_json)
       end
 
       # Modify a key
