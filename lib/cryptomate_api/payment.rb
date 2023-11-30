@@ -16,47 +16,49 @@ module CryptomateApi
   # This notification will contain the status of the payment.
   #
   class Payment < Base
-    # Creates a new payment request.
-    # https://cryptomate.me/docs/payments#create-payments-request
-    # @param [String] token_address (Address of the contract from the token to transfer.)
-    # @param [double] amount (Amount of the selected asset to be payed.)
-    # @param [String] blockchain (Blockchain to create the payment.)
-    # Response:
-    # {
-    #   "id": "String",
-    #   "token_address": "String",
-    #   "wallet_address": "String",
-    #   "amount": "Decimal",
-    # }
-    def create_payments_request(token_address, amount, blockchain)
-      self.class.post('/commerce/payments/create', body: { token_address:, amount:, blockchain: }.to_json)
-    end
+    class << self
+      # Creates a new payment request.
+      # https://cryptomate.me/docs/payments#create-payments-request
+      # @param [String] token_address (Address of the contract from the token to transfer.)
+      # @param [double] amount (Amount of the selected asset to be payed.)
+      # @param [String] blockchain (Blockchain to create the payment.)
+      # Response:
+      # {
+      #   "id": "String",
+      #   "token_address": "String",
+      #   "wallet_address": "String",
+      #   "amount": "Decimal",
+      # }
+      def create_payments_request(token_address, amount, blockchain)
+        post('/commerce/payments/create', body: { token_address:, amount:, blockchain: }.to_json)
+      end
 
-    # Returns all the pending payments.
-    # https://cryptomate.me/docs/payments#pending-payments
-    # Response:
-    # [
-    #   {
-    #     "id": "String",
-    #     "token_address": "String",
-    #     "wallet_address": "String",
-    #     "amount": "Decimal",
-    #   }
-    # ]
-    def pending_payments
-      self.class.get('/commerce/payments/list')
-    end
+      # Returns all the pending payments.
+      # https://cryptomate.me/docs/payments#pending-payments
+      # Response:
+      # [
+      #   {
+      #     "id": "String",
+      #     "token_address": "String",
+      #     "wallet_address": "String",
+      #     "amount": "Decimal",
+      #   }
+      # ]
+      def pending_payments
+        get('/commerce/payments/list')
+      end
 
-    # Retrieves all the listed tokens to create payments. In the response you will see the token name and it's address on the blockchain.
-    # https://cryptomate.me/docs/payments#get-listed-tokens
-    # @param [String] blockchain (Blockchain to get the listed tokens.)
-    # Response:
-    # {
-    #   "Token name 1": "String",
-    #   "Token name 2": "String",
-    # }
-    def get_listed_tokens(blockchain)
-      self.class.get("/commerce/payments/#{blockchain}/tokens")
+      # Retrieves all the listed tokens to create payments. In the response you will see the token name and it's address on the blockchain.
+      # https://cryptomate.me/docs/payments#get-listed-tokens
+      # @param [String] blockchain (Blockchain to get the listed tokens.)
+      # Response:
+      # {
+      #   "Token name 1": "String",
+      #   "Token name 2": "String",
+      # }
+      def get_listed_tokens(blockchain)
+        get("/commerce/payments/#{blockchain}/tokens")
+      end
     end
   end
 end

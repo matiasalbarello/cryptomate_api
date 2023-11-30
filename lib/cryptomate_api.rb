@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'cryptomate_api/configuration'
 require_relative 'cryptomate_api/base'
 require_relative 'cryptomate_api/payment'
 
