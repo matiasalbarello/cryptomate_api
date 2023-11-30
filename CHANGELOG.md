@@ -10,3 +10,7 @@
 ## [0.2.0] - 2023-11-30
 
 - Added [Payments module](https://cryptomate.me/docs/payments)
+
+## [0.3.0] - 2023-11-30
+
+- Refactor: made methods class methods
