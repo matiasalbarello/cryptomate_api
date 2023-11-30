@@ -4,7 +4,7 @@ require_relative 'cryptomate_api/configuration'
 require_relative 'cryptomate_api/base'
 require_relative 'cryptomate_api/payment'
 
-Dir[File.join(__dir__, 'cryptomate_api/{management,mpc,nft}/**/*.rb')].sort.each { |file| require file }
+Dir[File.join(__dir__, 'cryptomate_api/{management,mpc}/**/*.rb')].each { |file| require file }
 
 module CryptomateApi
   class Error < StandardError; end
